@@ -1,0 +1,288 @@
+<!-- 3b83867aed294e6f -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Carregando...</title>
+    
+    <style>
+        :root {
+            --primary-color: #01579B;
+            --secondary-color: #FBC02D;
+            --accent-color: #4CAF50;
+            --text-dark: #1A2028;
+            --text-light: #607080;
+            --bg-light: #F5F9FC;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --success-color: #388E3C;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); background-color: var(--white); line-height: 1.6; scroll-behavior: smooth; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .nvb1_nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .nvb1_logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); text-decoration: none; letter-spacing: 0.5px; }
+        .nvb1_logo span { color: var(--secondary-color); }
+        .nvb1_nav-menu { display: flex; list-style: none; gap: 20px; }
+        .nvb1_nav-menu a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: color 0.3s; }
+        .nvb1_nav-menu a:hover { color: var(--secondary-color); }
+        .nvb1_hero { background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%); padding: 80px 20px; text-align: center; }
+        .nvb1_hero-content { max-width: 800px; margin: 0 auto; }
+        .nvb1_hero h1 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 20px; }
+        .nvb1_hero h1 em { font-style: normal; color: var(--secondary-color); }
+        .nvb1_hero p { font-size: 1.15rem; color: var(--text-light); margin-bottom: 30px; }
+        .nvb1_btn { display: inline-block; background-color: var(--secondary-color); color: var(--primary-color); padding: 15px 35px; border-radius: var(--border-radius); text-decoration: none; font-weight: 800; transition: background 0.3s, transform 0.2s; border: none; cursor: pointer; font-size: 1rem; }
+        .nvb1_btn:hover { background-color: #F9A825; transform: translateY(-2px); }
+        .nvb1_collections-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .nvb1_section-title { text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 15px; font-weight: 800; }
+        .nvb1_section-subtitle { text-align: center; color: var(--text-light); max-width: 620px; margin: 0 auto 40px auto; font-size: 1.05rem; }
+        .nvb1_collections-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 30px; }
+        .nvb1_collection-card { background: var(--white); border: 1px solid #D1E4F5; border-radius: var(--border-radius); padding: 30px 25px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 3px solid var(--secondary-color); }
+        .nvb1_collection-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); border-top-color: var(--accent-color); }
+        .nvb1_collection-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .nvb1_collection-card h3 { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px; }
+        .nvb1_collection-card p { color: var(--text-light); font-size: 0.95rem; }
+        .nvb1_trust-section { background-color: #F5F9FC; padding: 60px 20px; }
+        .nvb1_trust-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .nvb1_trust-card { background: var(--white); padding: 30px; border-radius: var(--border-radius); border: 1px solid #D1E4F5; box-shadow: 0 4px 12px rgba(0,0,0,0.01); border-left: 4px solid var(--accent-color); }
+        .nvb1_trust-card h3 { color: var(--primary-color); margin-bottom: 12px; font-size: 1.25rem; display: flex; align-items: center; gap: 10px; }
+        .nvb1_trust-card h3::before { content: "✓"; color: var(--secondary-color); font-weight: bold; font-size: 1.4rem; }
+        .nvb1_trust-card p { color: var(--text-light); font-size: 0.95rem; }
+        .nvb1_disclosure-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #D1E4F5; }
+        .nvb1_disclosure-container { max-width: 1200px; margin: 0 auto; }
+        .nvb1_disclosure-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--white); border-radius: var(--border-radius); overflow: hidden; border: 1px solid #D1E4F5; }
+        .nvb1_disclosure-table th, .nvb1_disclosure-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #D1E4F5; }
+        .nvb1_disclosure-table th { background-color: #E1F5FE; color: var(--primary-color); font-weight: 700; }
+        .nvb1_disclosure-note { font-size: 0.85rem; color: var(--text-light); text-align: justify; background: var(--bg-light); padding: 20px; border-radius: var(--border-radius); border: 1px solid #D1E4F5; }
+        .nvb1_contact-section { background: linear-gradient(135deg, var(--primary-color) 0%, #003C71 100%); color: var(--white); padding: 60px 20px; }
+        .nvb1_contact-container { max-width: 550px; margin: 0 auto; }
+        .nvb1_contact-form { background: var(--white); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.15); color: var(--text-dark); }
+        .nvb1_form-group { margin-bottom: 20px; }
+        .nvb1_form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); font-size: 0.9rem; }
+        .nvb1_form-group input, .nvb1_form-group select, .nvb1_form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #C0D8ED; border-radius: var(--border-radius); font-size: 1rem; outline: none; transition: border-color 0.3s; font-family: inherit; }
+        .nvb1_form-group textarea { resize: vertical; min-height: 90px; }
+        .nvb1_form-group input:focus, .nvb1_form-group select:focus, .nvb1_form-group textarea:focus { border-color: var(--secondary-color); }
+        .nvb1_success-message { display: none; background-color: #E8F5E9; border: 2px solid var(--success-color); color: var(--primary-color); padding: 30px; border-radius: var(--border-radius); text-align: center; }
+        .nvb1_success-message h3 { margin-bottom: 10px; color: #1B5E20; }
+        footer { background-color: #01304F; color: #A5C3D8; padding: 60px 20px 20px 20px; font-size: 0.9rem; border-top: 3px solid var(--secondary-color); }
+        .nvb1_footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .nvb1_footer-brand h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 15px; }
+        .nvb1_footer-links h4, .nvb1_footer-contact h4 { color: var(--white); margin-bottom: 15px; }
+        .nvb1_footer-links ul { list-style: none; }
+        .nvb1_footer-links ul li { margin-bottom: 10px; }
+        .nvb1_footer-links ul li a { color: #A5C3D8; text-decoration: none; transition: color 0.3s; }
+        .nvb1_footer-links ul li a:hover { color: var(--secondary-color); }
+        .nvb1_footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #01579B; text-align: center; font-size: 0.8rem; }
+        @media (max-width: 768px) {
+            .nvb1_nav-container { flex-direction: column; gap: 15px; }
+            .nvb1_hero h1 { font-size: 2rem; }
+            .nvb1_disclosure-table { display: block; overflow-x: auto; }
+            .nvb1_contact-form { padding: 25px; }
+        }
+    </style>
+
+<link rel="canonical" href="https://petmaxi.online/">
+<meta name="description" content="Descubra informações exclusivas e conteúdo verificado em petmaxi.online. Acesse agora e confira os detalhes completos.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://petmaxi.online/">
+<meta property="og:site_name" content="petmaxi.online">
+<meta property="og:description" content="Descubra informações exclusivas e conteúdo verificado em petmaxi.online. Acesse agora e confira os detalhes completos.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="petmaxi.online">
+<meta name="generator" content="cms-b69c6c217d4a">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Petmaxi","url":"https://petmaxi.online/","datePublished":"2024-10-10","dateModified":"2026-12-22","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Petmaxi","url":"https://petmaxi.online/"},"publisher":{"@type":"Organization","name":"Petmaxi","url":"https://petmaxi.online/"}}</script>
+
+<style>:root{--kdxr-p:rgb(54,45,130);--kdxr-s:rgb(24,45,194);--kdxr-id:'c561716800e7'}@keyframes drhxewkx{from{opacity:1}to{opacity:1}}.woalhq{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:m4mlksjcqp v2.6.280 -->
+</head>
+<body data-s="3361f01f" data-p="qd293y">
+<noscript><div style="padding:18px;text-align:center;"><p>Este conteúdo de petmaxi requer JavaScript habilitado para funcionar corretamente.</p></div></noscript>
+    <header>
+        <nav class="nvb1_nav-container">
+            <a href="#" class="nvb1_logo" id="header-logo"></a>
+            <ul class="nvb1_nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#departamentos">Departamentos</a></li>
+                <li><a href="#confianca">Nossa Loja</a></li>
+                <li><a href="#garantias">Trocas e Segurança</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="nvb1_hero" id="home">
+        <div class="nvb1_hero-content">
+            <h1>Tudo para o seu <em>Bicho</em>, sua Casa e seu Jardim</h1>
+            <p id="hero-description"></p>
+            <a href="#contato" class="nvb1_btn">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section class="nvb1_collections-section" id="departamentos">
+        <h2 class="nvb1_section-title">Nossos Departamentos</h2>
+        <p class="nvb1_section-subtitle">Muito mais do que um petshop — uma loja de bairro que reúne rações, farmácia veterinária, banho e tosa, jardinagem e até petiscos e guloseimas para os tutores, tudo em um só endereço no Imirim.</p>
+        <div class="nvb1_collections-grid">
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">🥣</div><h3>Rações e Alimentos</h3><p>Alimentos secos e úmidos para cães, gatos, aves, roedores e peixes, das principais marcas nacionais e importadas, com registro no MAPA.</p></div>
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">🎾</div><h3>Acessórios e Brinquedos</h3><p>Coleiras, guias, camas, comedouros, arranhadores, brinquedos e utilidades domésticas para o convívio diário com o seu pet.</p></div>
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">🍬</div><h3>Petiscos e Guloseimas</h3><p>Bifinhos, ossinhos e biscoitos naturais para pets, além de doces, balas e bombons para os tutores que aguardam o serviço de banho e tosa.</p></div>
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">💊</div><h3>Farmácia Veterinária</h3><p>Medicamentos veterinários com registro no MAPA, antipulgas, vermífugos e produtos de prescrição, sob orientação de responsável técnico.</p></div>
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">🌿</div><h3>Jardim e Plantas Naturais</h3><p>Plantas ornamentais, flores naturais, vasos, substratos e adubos para quem quer trazer verde para dentro de casa ou compor um jardim.</p></div>
+            <div class="nvb1_collection-card"><div class="nvb1_collection-icon">🛁</div><h3>Banho e Tosa</h3><p>Serviços realizados sob supervisão veterinária, com produtos hipoalergênicos, tosa higiênica e estilizada para cães e gatos de todos os portes.</p></div>
+        </div>
+    </section>
+
+    <section class="nvb1_trust-section" id="confianca">
+        <h2 class="nvb1_section-title">Sobre a Pet Maxi</h2>
+        <p class="nvb1_section-subtitle">Há mais de duas décadas na Avenida Engenheiro Caetano Álvares, no bairro Imirim, em São Paulo — atendendo tutores da Zona Norte com um mix único que vai do pet ao jardim, do medicamento ao petisco.</p>
+        <div class="nvb1_trust-grid">
+            <div class="nvb1_trust-card"><h3>Curadoria de Rações e Alimentos</h3><p>Trabalhamos apenas com marcas e lotes registrados no MAPA, com rotulagem completa conforme legislação vigente para alimentos pet, e orientação especializada sobre nutrição por espécie e fase da vida.</p></div>
+            <div class="nvb1_trust-card"><h3>Farmácia com Responsável Técnico</h3><p>Nossa farmácia veterinária opera sob supervisão de médico veterinário registrado no CRMV, conforme exigido pela Resolução CFMV para dispensa de medicamentos veterinários e produtos de prescrição.</p></div>
+            <div class="nvb1_trust-card"><h3>Loja Completa de Bairro</h3><p>Diferencial no segmento pet: reunimos em um único endereço rações, farmácia, banho e tosa, jardinagem, acessórios e até bomboniere — otimizando o tempo do tutor e servindo toda a família.</p></div>
+        </div>
+    </section>
+
+    <section class="nvb1_disclosure-section" id="garantias">
+        <div class="nvb1_disclosure-container">
+            <h2 class="nvb1_section-title">Trocas, Segurança e Direitos do Consumidor</h2>
+            <p class="nvb1_section-subtitle">Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com as normas do MAPA para alimentos e medicamentos veterinários e com as resoluções do CFMV para atividades veterinárias:</p>
+            <table class="nvb1_disclosure-table">
+                <thead><tr><th>Item</th><th>Condição / Prazo</th><th>Observações Adicionais</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Garantia Legal</strong></td><td><strong>30 dias</strong> não duráveis / <strong>90 dias</strong> duráveis</td><td>Conforme art. 26 do CDC. Rações, petiscos, doces e flores são não duráveis; acessórios e brinquedos, duráveis.</td></tr>
+                    <tr><td><strong>Troca de Ração</strong></td><td>Até <strong>7 dias</strong> após a compra</td><td>Embalagem lacrada, com nota fiscal e dentro do prazo de validade. Ração aberta só pode ser trocada por defeito comprovado do fabricante.</td></tr>
+                    <tr><td><strong>Medicamentos Veterinários</strong></td><td>Registro obrigatório no MAPA</td><td>Dispensados mediante indicação profissional. Medicamentos controlados exigem receituário do médico veterinário responsável.</td></tr>
+                    <tr><td><strong>Alimentos Pet</strong></td><td>Rotulagem conforme IN MAPA 30/2009</td><td>Todo alimento pet possui composição, níveis de garantia, indicação por espécie e fase da vida impressos na embalagem.</td></tr>
+                    <tr><td><strong>Plantas e Flores</strong></td><td>Garantia de vitalidade na entrega</td><td>Vistoria no ato da compra; plantas com sinais de má saúde não são comercializadas. Cuidados de manutenção informados por escrito.</td></tr>
+                    <tr><td><strong>Banho e Tosa</strong></td><td>Agendamento prévio recomendado</td><td>Serviço realizado conforme Resolução CFMV 1.015/2012, com uso de produtos hipoalergênicos e higienização de instrumentos entre atendimentos.</td></tr>
+                    <tr><td><strong>Formas de Pagamento</strong></td><td>Dinheiro, cartão, PIX e boleto</td><td>Parcelamento em até 4x sem juros no cartão para compras acima de valor mínimo.</td></tr>
+                </tbody>
+            </table>
+            <div class="nvb1_disclosure-note" id="disclosure-example-note"></div>
+        </div>
+    </section>
+
+    <section class="nvb1_contact-section" id="contato">
+        <div class="nvb1_contact-container">
+            <h2 class="nvb1_section-title" style="color: var(--white);">Fale com a Gente</h2>
+            <p class="nvb1_section-subtitle" style="color: #B8D4E8;">Preencha o formulário abaixo e um de nossos atendentes retornará em até 2 horas úteis com informações sobre produtos, agendamento de banho e tosa, disponibilidade de plantas ou dúvidas sobre medicamentos.</p>
+            <form class="nvb1_contact-form" id="lead-form">
+                <div class="nvb1_form-group"><label for="form-name">Nome Completo</label><input type="text" id="form-name" placeholder="Ex: Ana Souza" required></div>
+                <div class="nvb1_form-group"><label for="form-email">E-mail</label><input type="email" id="form-email" placeholder="Ex: ana@email.com" required></div>
+                <div class="nvb1_form-group"><label for="form-phone">Telefone / WhatsApp</label><input type="tel" id="form-phone" placeholder="Ex: (11) 99999-0000" required></div>
+                <div class="nvb1_form-group">
+                    <label for="form-intent">Como podemos ajudar?</label>
+                    <select id="form-intent" required>
+                        <option value="">Selecione um assunto...</option>
+                        <option value="racoes">Rações e Alimentos</option>
+                        <option value="acessorios">Acessórios e Brinquedos</option>
+                        <option value="petiscos">Petiscos e Guloseimas</option>
+                        <option value="farmacia">Farmácia Veterinária</option>
+                        <option value="jardim">Jardim e Plantas Naturais</option>
+                        <option value="banhotosa">Banho e Tosa (agendamento)</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="nvb1_form-group"><label for="form-message">Detalhes (opcional)</label><textarea id="form-message" placeholder="Ex: espécie e porte do pet, marca de ração, tipo de planta, data desejada para banho..."></textarea></div>
+                <button type="submit" class="nvb1_btn" style="width: 100%; margin-top: 10px;">Enviar Solicitação</button>
+            </form>
+            <div class="nvb1_success-message" id="form-success">
+                <h3>✓ Solicitação Recebida com Sucesso!</h3>
+                <p>Olá, <strong id="user-name-span"></strong>. Seu contato foi registrado.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Nossa equipe retornará em breve pelo canal indicado.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="nvb1_footer-container">
+            <div class="nvb1_footer-brand" id="footer-brand-info"></div>
+            <div class="nvb1_footer-links">
+                <h4>Políticas e Termos</h4>
+                <ul>
+                    <li><a id="link-privacy" href="#" target="_blank">Política de Privacidade</a></li>
+                    <li><a id="link-terms" href="#" target="_blank">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="nvb1_footer-contact" id="footer-contact-info"></div>
+        </div>
+        <div class="nvb1_footer-bottom">
+            <p id="footer-correspondent-law"></p>
+            <p style="margin-top: 10px;">&copy; <span id="copyright-year"></span> <span id="copyright-legal-name"></span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const CONFIG = {
+            tradeName: "Pet Maxi",
+            legalName: "Comercio Varejista de Produtos Veterinario Petmaxi LTDA",
+            cnpj: "06.140.942/0001-51",
+            address: "Av. Eng. Caetano Álvares, 3987, Loja 01, Imirim, São Paulo – SP, CEP 02413-000",
+            phone: "(11) 2236-5130",
+            email: "contato@petmaxi.com.br",
+            privacyUrl: "https://petmaxi.com.br/privacidade.html",
+            termsUrl: "https://petmaxi.com.br/termos.html",
+            segment: "Comércio Varejista de Alimentos, Artigos Pet, Medicamentos Veterinários, Plantas e Serviços"
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('page-title').innerText = `${CONFIG.tradeName} | Petshop, Farmácia Veterinária, Jardim e Banho e Tosa no Imirim`;
+            document.getElementById('page-description').setAttribute('content', `${CONFIG.tradeName} — petshop completo no Imirim, São Paulo. Rações, medicamentos veterinários, banho e tosa, plantas naturais e petiscos em um só endereço.`);
+            
+            const nameParts = CONFIG.tradeName.split(' ');
+            const firstWord = nameParts[0];
+            const restOfName = nameParts.slice(1).join(' ');
+            document.getElementById('header-logo').innerHTML = restOfName
+                ? `${firstWord}<span> ${restOfName}</span>`
+                : firstWord;
+
+            document.getElementById('hero-description').innerHTML = `Há mais de duas décadas no bairro Imirim, em São Paulo, oferecendo rações, medicamentos veterinários, acessórios, banho e tosa, plantas naturais e petiscos — um mix único que atende toda a família em um único endereço na Zona Norte.`;
+            
+            document.getElementById('disclosure-example-note').innerHTML = `<strong>Observações sobre alimentos, medicamentos, plantas e bem-estar animal:</strong> <br> Todos os alimentos pet comercializados possuem registro no Ministério da Agricultura, Pecuária e Abastecimento (MAPA) e rotulagem em conformidade com a Instrução Normativa MAPA nº 30/2009. Medicamentos veterinários são dispensados sob supervisão de médico veterinário responsável técnico registrado no CRMV. Serviços de banho e tosa são executados em conformidade com a Resolução CFMV nº 1.015/2012. Plantas ornamentais e flores naturais comercializadas passam por conferência de vitalidade no ato da entrega, com orientação de cuidados básicos aos clientes. Doces, balas e bombons destinados ao consumo humano seguem as normas da ANVISA aplicáveis à categoria.`;
+
+            document.getElementById('footer-brand-info').innerHTML = `
+                <h4>${CONFIG.tradeName}</h4>
+                <p><strong>${CONFIG.legalName}</strong></p>
+                <p>CNPJ: ${CONFIG.cnpj}</p>
+                <br>
+                <p>Endereço: ${CONFIG.address}</p>
+            `;
+
+            document.getElementById('link-privacy').href = CONFIG.privacyUrl;
+            document.getElementById('link-terms').href = CONFIG.termsUrl;
+
+            document.getElementById('footer-contact-info').innerHTML = `
+                <h4>Atendimento</h4>
+                <p>Telefone: ${CONFIG.phone}</p>
+                <p>E-mail: <a href="mailto:${CONFIG.email}" style="color: #A5C3D8; text-decoration: none;">${CONFIG.email}</a></p>
+            `;
+
+            document.getElementById('footer-correspondent-law').innerHTML = `A <strong>${CONFIG.tradeName}</strong> (${CONFIG.legalName}) atua no ramo de ${CONFIG.segment.toLowerCase()}, em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), com as normas do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) para alimentos e medicamentos veterinários, com as Resoluções do Conselho Federal de Medicina Veterinária (CFMV) para estabelecimentos que comercializam produtos e prestam serviços a animais, e com as normas da ANVISA aplicáveis a doces, balas e bombons destinados ao consumo humano. Imagens meramente ilustrativas. Preços, disponibilidade e agendamentos estão sujeitos a confirmação no ato da compra.`;
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('copyright-legal-name').textContent = CONFIG.legalName;
+
+            initFormSubmission();
+        });
+
+        function initFormSubmission() {
+            const form = document.getElementById('lead-form');
+            const successBox = document.getElementById('form-success');
+            const userNameSpan = document.getElementById('user-name-span');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const inputName = document.getElementById('form-name').value;
+                userNameSpan.innerText = inputName;
+                form.style.display = 'none';
+                successBox.style.display = 'block';
+            });
+        }
+    </script>
+<footer style="text-align:center;padding:22px 15px;font-size:10px;color:#b0b0b0;margin-top:45px;border-top:1px solid #e8e8e8"><p>Copyright © 2026 Petmaxi. Conteúdo protegido. As informações nesta página são de caráter informativo. | <a href="https://petmaxi.online/" style="color:#b0b0b0;text-decoration:none">petmaxi.online</a></p></footer>
+</body>
+</html>
+
+<!-- d4c102643106db48c07c0d3f -->
